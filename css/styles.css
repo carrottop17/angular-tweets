@@ -4,14 +4,45 @@
 }
 
 /* line 5, ../compass/sass/styles.scss */
-.navbar {
-  background-color: red;
+.testTweets {
+  background-color: rgba(248, 248, 248, 0.6);
+  color: #0d1659;
+  padding: 1px 10px;
+  border: 3px solid rgba(208, 1, 8, 0.5);
+  margin: 20px;
+  border-radius: 20px;
 }
 
-/* line 9, ../compass/sass/styles.scss */
-.testTweets {
-  background-color: blue;
-  color: white;
-  padding: 1px 10px;
-  border: 1px solid red;
+/* line 13, ../compass/sass/styles.scss */
+body {
+  background-image: url("../images/americanflag.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #bfbfbf;
+}
+
+/* line 21, ../compass/sass/styles.scss */
+.tweetBoxes {
+  margin-top: 50px;
+}
+
+/* line 25, ../compass/sass/styles.scss */
+#hillary {
+  color: #d00108;
+}
+
+/* line 29, ../compass/sass/styles.scss */
+#trump {
+  color: #0d1659;
+}
+
+/* line 33, ../compass/sass/styles.scss */
+#tweetColor {
+  color: #61aadb;
+}
+
+/* line 37, ../compass/sass/styles.scss */
+img {
+  width: 100%;
 }

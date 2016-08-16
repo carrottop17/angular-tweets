@@ -4,23 +4,31 @@ tweetApp.controller('homeController', function($scope, $http){
 
 	$scope.tweets = [];
 
-	function Tweet(name, timeStamp, message){
-		this.name = name;
-		this.timeStamp = timeStamp;
-		this.message = message;
+	function Tweet(title, userName, postContent, img, postTime){
+		this.title = title;
+		this.userName = userName;
+		this.postContent = postContent;
+		this.img = img;
+		this.postTime = postTime;
 	};
 
-	$scope.tweets.push(new Tweet('Jenny', '6:05pm', 'message1'));
-	$scope.tweets.push(new Tweet('Bob', '4:34am', 'message2'));
-	$scope.tweets.push(new Tweet('Barb', '7:30pm', 'message3'));
-	$scope.tweets.push(new Tweet('Dan', '12:30pm', 'message4'));
-	$scope.tweets.push(new Tweet('Jackie', '11:34am', 'message5'));
-	$scope.tweets.push(new Tweet('Ted', '8:45pm', 'message6'));
-	$scope.tweets.push(new Tweet('Dirk', '3:45am', 'message7'));
-	$scope.tweets.push(new Tweet('Sarah', '1:23pm', 'message8'));
-	$scope.tweets.push(new Tweet('Liz', '2:45pm', 'message9'));
-	$scope.tweets.push(new Tweet('John', '10:10am', 'message10'));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message1', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message2', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message3', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message4', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message5', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message6', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message7', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message8', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message9', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message10', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+
+	Tweet.prototype.getTimeSince = function(theDate) {
+			// var timeSince =  (theDate - this.postTime) / 1000;
+			// if(timeSince > secondsInAYear){
+			// 	var textToPost = Math.floor(timeSince/secondsInAYear);
+			// }
+			return (theDate- this.postTime) / 1000;
+		};
 	
-
-
 });

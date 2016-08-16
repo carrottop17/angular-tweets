@@ -2,9 +2,11 @@
 <div class="container">
 	<div class="col-sm-12">
 		<div class ="testTweets" ng-repeat="tweet in tweets track by $index">
-			<h2>Message: {{tweet.message}}</h2>
-			<h3>Name: {{tweet.name}}</h3> 
-			<h4>Time: {{tweet.timeStamp}}</h4>
-		</div>
+			<h2>Title: {{tweet.title}}</h2>
+			<h3>User Name: {{tweet.userName}}</h3>
+			<h4>Content: {{tweet.postContent}}</h4>
+			<img ng-src="{{tweet.img}}" alt="">
+			<h4>Time: {{tweet.postTime}}</h4>
+
 	</div>
 </div>

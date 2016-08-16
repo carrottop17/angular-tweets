@@ -2,13 +2,38 @@
 	margin-top: 50px;
 }
 
-.navbar{
-	background-color: red;
+.testTweets{
+	background-color: rgba(248, 248, 248, 0.6);
+	color: rgb(13, 22, 89);
+	padding: 1px 10px;
+	border: 3px solid rgba(208, 1, 8, 0.5);
+	margin: 20px;
+	border-radius: 20px;
+}
+body{
+	background-image: url("../images/americanflag.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #bfbfbf;
 }
 
-.testTweets{
-	background-color: blue;
-	color: white;
-	padding: 1px 10px;
-	border: 1px solid red;
+.tweetBoxes{
+	margin-top: 50px;
+}
+
+#hillary{
+	color: rgb(208, 1, 8);
+}
+
+#trump{
+	color: rgb(13, 22, 89);
+}
+
+#tweetColor{
+	color: rgb(97, 170, 219);
+}
+
+img{
+	width: 100%;
 }
