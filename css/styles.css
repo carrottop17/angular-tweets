@@ -1,0 +1,17 @@
+/* line 1, ../compass/sass/styles.scss */
+.title {
+  margin-top: 50px;
+}
+
+/* line 5, ../compass/sass/styles.scss */
+.navbar {
+  background-color: red;
+}
+
+/* line 9, ../compass/sass/styles.scss */
+.testTweets {
+  background-color: blue;
+  color: white;
+  padding: 1px 10px;
+  border: 1px solid red;
+}

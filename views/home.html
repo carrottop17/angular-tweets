@@ -1,0 +1,10 @@
+<custom-menu></custom-menu>
+<div class="container">
+	<div class="col-sm-12">
+		<div class ="testTweets" ng-repeat="tweet in tweets track by $index">
+			<h2>Message: {{tweet.message}}</h2>
+			<h3>Name: {{tweet.name}}</h3> 
+			<h4>Time: {{tweet.timeStamp}}</h4>
+		</div>
+	</div>
+</div>

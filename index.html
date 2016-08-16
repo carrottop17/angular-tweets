@@ -2,6 +2,19 @@
 <html ng-app="tweetApp">
 <head>
 	<title></title>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
@@ -10,15 +23,34 @@
 
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
+	<script type="text/javascript" src="js/homeController.js"></script>
+	<script type="text/javascript" src="js/trumpController.js"></script>
+	<script type="text/javascript" src="js/hillaryController.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 <body ng-controller="tweetController">
+	<div class="container">
+		<div class = row>
+			<div class="col-sm-12 text-center title">
+			<h1>Hillary vs Trump Tweets</h1>
+			<h2>Who said it better</h2>
+			</div>
+		</div>
+		<div ng-view>
+			{{test}}
+		</div>
+	</div>
 
-	<tweet-hello></tweet-hello>
-	<div hello-attr></div>
-	<div class="hello-class"></div>
-
-	<div turn-me-blue>Hover over me and I will console.  I am a custome directive</div>
-	
 </body>
+
+<!-- <tweet-hello></tweet-hello>
+	<div hello-attr></div>
+	<div turn-me-blue="myColor" class="hello-class"></div>
+
+	<input type="text" ng-model="myColor" name="">
+
+	<div turn-me-blue>Hover over me and I will console.  I am a custome directive</div> -->
+
 </html>
