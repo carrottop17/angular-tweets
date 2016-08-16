@@ -46,3 +46,19 @@ body {
 img {
   width: 100%;
 }
+
+/* line 41, ../compass/sass/styles.scss */
+.names {
+  text-align: center;
+  color: #d00108;
+  background-color: rgba(248, 248, 248, 0.6);
+  padding: 1px 10px;
+  border: 3px solid rgba(208, 1, 8, 0.5);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* line 51, ../compass/sass/styles.scss */
+.btn {
+  margin-top: 8px;
+}

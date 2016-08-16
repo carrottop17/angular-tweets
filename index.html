@@ -2,7 +2,7 @@
 <html ng-app="tweetApp">
 <head>
 	<title></title>
-	
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -26,11 +26,12 @@
 	<script type="text/javascript" src="js/homeController.js"></script>
 	<script type="text/javascript" src="js/trumpController.js"></script>
 	<script type="text/javascript" src="js/hillaryController.js"></script>
+	<script type="text/javascript" src="js/tweets.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
-<body ng-controller="tweetController" class="flag">
+<body ng-controller="homeController" class="flag">
 	<div class="container">
 		<!-- <div class = row>
 			<div class="col-sm-12 text-center title">
@@ -39,9 +40,7 @@
 			</div>
 		</div> -->
 		<div class="tweetBoxes">
-			<div ng-view>
-				
-			</div>
+			<div ng-view></div>
 		</div>
 	</div>
 

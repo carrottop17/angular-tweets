@@ -1,12 +1,23 @@
 <custom-menu></custom-menu>
 <div class="container">
-	<div class="col-sm-12">
-		<div class ="testTweets" ng-repeat="tweet in tweets track by $index">
-			<h2>Title: {{tweet.title}}</h2>
-			<h3>User Name: {{tweet.userName}}</h3>
-			<h4>Content: {{tweet.postContent}}</h4>
-			<img ng-src="{{tweet.img}}" alt="">
-			<h4>Time: {{tweet.postTime}}</h4>
-
+	<div class="row">
+		<div class="col-sm-6">
+			<h2 class="names">Hillary Clinton</h2>
+			<div class ="testTweets" ng-repeat="tweetH in tweetsH track by $index">
+				<h3>User Name: {{tweetH.user.screen_name}}</h3>
+				<h4>Content: {{tweetH.text}}</h4>
+				<img ng-src="{{tweetH.user.profile_banner_url}}" alt="">
+				<h4>Time: {{tweetH.created_at}}</h4>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<h2 class="names">Donald Trump</h2>
+			<div class="testTweets" ng-repeat="tweet in tweets track by $index">
+				<h3>User Name: {{tweet.user.screen_name}}</h3>
+				<h4>Content: {{tweet.text}}</h4>
+				<img ng-src="{{tweet.user.profile_banner_url}}" alt="">
+				<h4>Time: {{tweet.created_at}}</h4>
+			</div>
+		</div>
 	</div>
 </div>

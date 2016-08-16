@@ -1,34 +1,38 @@
-tweetApp.controller('homeController', function($scope, $http){
-	
-	// $scope.hillaryTweets = tweets;
+tweetApp.controller('homeController', function($scope, $http, $location, $routeParams){
+	$scope.tweets = tweets;
+	// console.log($location);
+	console.log($routeParams);
 
-	$scope.tweets = [];
+	if($routeParams.searchTem){
+		var searchTerm = $routeParams.searchTerm;
+	}else{
+		var searchTerm = 'trump';
+	}
 
-	function Tweet(title, userName, postContent, img, postTime){
-		this.title = title;
-		this.userName = userName;
-		this.postContent = postContent;
-		this.img = img;
-		this.postTime = postTime;
-	};
+	$http({
+		method: 'GET',
+		url: 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash='+searchTerm
+	}).then(
+		function successFunction(tweetData){
+			$scope.tweets = tweetData.data.statuses;
+			console.log(tweetData.data.statuses);
 
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message1', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message2', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message3', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message4', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message5', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message6', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message7', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message8', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message9', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
-	$scope.tweets.push(new Tweet('This is the tiltle', 'dc4life', 'message10', 'https://pbs.twimg.com/profile_banners/30318720/1398951622/1500x500', 1471351423825));
+		},function failureFunction(tweetData){
+			console.log(tweetData);
+	});
 
-	Tweet.prototype.getTimeSince = function(theDate) {
-			// var timeSince =  (theDate - this.postTime) / 1000;
-			// if(timeSince > secondsInAYear){
-			// 	var textToPost = Math.floor(timeSince/secondsInAYear);
-			// }
-			return (theDate- this.postTime) / 1000;
-		};
-	
+
+	$http({
+		method: 'GET',
+		url: 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=hillaryclinton'
+	}).then(
+		function successFunction(tweetData){
+			$scope.tweetsH = tweetData.data.statuses;
+			console.log(tweetData.data.statuses);
+
+		},function failureFunction(tweetData){
+			console.log(tweetData);
+	});
+
+
 });
