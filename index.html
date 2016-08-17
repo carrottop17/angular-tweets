@@ -2,7 +2,7 @@
 <html ng-app="tweetApp">
 <head>
 	<title></title>
-
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -20,6 +20,11 @@
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
 
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
@@ -31,7 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
-<body ng-controller="homeController" class="flag">
+<body ng-controller="homeController" class="flag" ng-init="showPrompt()">
 	<div class="container">
 		<!-- <div class = row>
 			<div class="col-sm-12 text-center title">
@@ -39,6 +44,7 @@
 			<h2>Who said it better</h2>
 			</div>
 		</div> -->
+
 		<div class="tweetBoxes">
 			<div ng-view></div>
 		</div>

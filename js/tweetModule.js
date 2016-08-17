@@ -1,4 +1,4 @@
-var tweetApp = angular.module('tweetApp', ['ngRoute']);
+var tweetApp = angular.module('tweetApp', ['ngRoute', 'ngMaterial']);
 
 tweetApp.directive('customMenu', function(){
 	return{
