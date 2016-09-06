@@ -26,26 +26,3 @@ tweetApp.config(function($routeProvider){
 	});
 	$routeProvider.otherwise('/'); //default
 });
-
-tweetApp.factory('myFactory', function(){
-    var factory = {};
-
-    factory.getVar = function(){
-        return this.variable;
-    }
-
-    factory.setVar = function(data){
-        this.variable = data;
-    }
-    
-    return factory;
-});
-
-tweetApp.controller('MainController', function($scope, myFactory){
-    myFactory.setVar("this is a variable");
-});
-
-tweetApp.controller('AnotherController', function($scope, myFactory){
-    console.log(myFactory.getVar());
-    // "this is a variable"
-})
