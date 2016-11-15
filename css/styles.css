@@ -14,40 +14,46 @@
 }
 
 /* line 13, ../compass/sass/styles.scss */
-body {
+html {
   background-image: url("../images/americanflag.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #bfbfbf;
+  height: 100%;
 }
 
 /* line 21, ../compass/sass/styles.scss */
+body {
+  background-color: transparent;
+}
+
+/* line 25, ../compass/sass/styles.scss */
 .tweetBoxes {
   margin-top: 50px;
 }
 
-/* line 25, ../compass/sass/styles.scss */
+/* line 29, ../compass/sass/styles.scss */
 #hillary {
   color: #d00108;
 }
 
-/* line 29, ../compass/sass/styles.scss */
+/* line 33, ../compass/sass/styles.scss */
 #trump {
   color: #0d1659;
 }
 
-/* line 33, ../compass/sass/styles.scss */
+/* line 37, ../compass/sass/styles.scss */
 #tweetColor {
   color: #61aadb;
 }
 
-/* line 37, ../compass/sass/styles.scss */
+/* line 41, ../compass/sass/styles.scss */
 img {
   width: 100%;
 }
 
-/* line 41, ../compass/sass/styles.scss */
+/* line 45, ../compass/sass/styles.scss */
 .names {
   text-align: center;
   color: #d00108;
@@ -58,12 +64,12 @@ img {
   border-radius: 10px;
 }
 
-/* line 51, ../compass/sass/styles.scss */
+/* line 55, ../compass/sass/styles.scss */
 .btn {
   margin-top: 8px;
 }
 
-/* line 54, ../compass/sass/styles.scss */
+/* line 58, ../compass/sass/styles.scss */
 .active {
   font-weight: bold;
 }

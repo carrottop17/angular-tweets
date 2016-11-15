@@ -10,12 +10,16 @@
 	margin: 20px;
 	border-radius: 20px;
 }
-body{
+html{
 	background-image: url("../images/americanflag.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: #bfbfbf;
+	height: 100%;
+}
+body{
+	background-color: transparent;
 }
 
 .tweetBoxes{
