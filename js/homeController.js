@@ -9,7 +9,7 @@ tweetApp.controller('homeController', function($scope, $http, $location, $routeP
       .title('Who\'s Twitter feed would you like to view?')
       .textContent('Type either Trump or Hillary')
       .placeholder('Next president')
-      .ariaLabel('Dog name')
+      .ariaLabel('Which Tweet')
       .targetEvent(ev)
       .ok('Okay!')
       .cancel('Both');
@@ -28,7 +28,7 @@ tweetApp.controller('homeController', function($scope, $http, $location, $routeP
 		$scope.hillary = "";
 		$scope.home = "";
 
-		console.log("the path changed. It's now " + newPath)
+		// console.log("the path changed. It's now " + newPath)
 		if(newPath == "/trump"){
 			$scope.trump = "active";
 		}else if(newPath == "/hillary"){
